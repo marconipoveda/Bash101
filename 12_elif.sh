@@ -1,5 +1,5 @@
 #!/bin/bash
-# Programa para ejemplificar el uso de la sentencia if
+# Programa para ejemplificar el uso de la sentencia elif
 
 edad=0
 
@@ -11,6 +11,8 @@ if [ $edad -le 19 ]; then
 	echo "Menor de Edad"
 elif [ $edad -ge 19 ] && [ $edad -le 64 ]; then
 	echo "Adulto"
+elif [ $edad -gt 90 ]; then
+	echo "Tercera Edad avanzada"
 else
-	echo "Adulto"
+	echo "Tercera Edad"
 fi
