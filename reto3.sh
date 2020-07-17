@@ -29,5 +29,19 @@ case $option in
 			echo "Lo siento, la Guerra de los 100 años no duró $answerGuerra años!"
 		fi
 		;;
+	3) read -p "¿Cuánto dura la luz del sol en llegar a la tierra?[minutos] " answerLuzSol
+		if [ $answerLuzSol -eq 8 ]; then
+			echo "Excelente! Respuesta correcta!"
+		else
+			echo "Lo siento, la luz del sol no llega a la tierra en $answerLuzSol minutos!"
+		fi
+		;;
+	4) read -p "¿Cómo se llama el primer presidente de Nicaragua? " answerPresidente
+		if [ $answerPresidente = "Emiliano Chamorro" ]; then
+			echo "Excelente! Respuesta correcta!"
+		else
+			echo "Lo siento, $answerPresidente no fue el primer presidente de Nicaragua!"
+		fi
+		;;
 
 esac
