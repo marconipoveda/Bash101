@@ -1,18 +1,26 @@
 #!/bin/bash
 #Script de resolución reto 3
-# Solicitar que se ingrese un valor del 1 al 5. Según el valor ingresado valor a validarlo utilizando las condicionales e imprimir según el valor ingresado. Construir expresiones de validaciòn númericas, cadenas y archivos según la opción ingresada.
-option=""
+# Solicitar que se ingrese un valor del 1 al 5. Según el valor ingresado valor a validarlo utilizando las condicionales e imprimir según el valor ingresado. Construir expresiones de validación númericas, cadenas y archivos según la opción ingresada.
 
-echo "Bienvenido a la resolución del reto!"
-echo "Elija su Opcion del siguente menú"
+echo "
+_____________________._______   _________   
+\__    ___/\______   \   \   \ /   /  _  \  
+  |    |    |       _/   |\   Y   /  /_\  \ 
+  |    |    |    |   \   | \     /    |    \ 
+  |____|    |____|_  /___|  \___/\____|__  / 
+                   \/                    \/
+"
+
+echo "Elija 1 pregunta e intente responderla correctamente!"
 echo "1) Pregunta de Geografia"
 echo "2) Pregunta de Historia"
 echo "3) Pregunta de Ciencias"
 echo "4) Pregunta de Política"
 echo "5) Pregunta de Informática"
-read -n1 -p "Escriba el número de su elección: " option
+echo -e ""
+read -n1 -p "Escriba el número del tipo de pregunta (1-5) :=> " option
 
-echo -e "\n$option"
+echo -e ""
 
 case $option in
 	1) read -p "¿Cuál es la capital de Nueva Zelanda? " answerCapital
@@ -37,10 +45,21 @@ case $option in
 		fi
 		;;
 	4) read -p "¿Cómo se llama el primer presidente de Nicaragua? " answerPresidente
-		if [ $answerPresidente = "Emiliano Chamorro" ]; then
+		if [ "$answerPresidente" = "Emiliano Chamorro" ]; then
 			echo "Excelente! Respuesta correcta!"
 		else
-			echo "Lo siento, $answerPresidente no fue el primer presidente de Nicaragua!"
+			echo "Lo siento, "$answerPresidente" no fue el primer presidente de Nicaragua!"
+		fi
+		;;
+	5) read -p "¿Cuántos bits hay en un Kilobyte? " answerKilo
+		if [ $answerKilo -eq 8192 ]; then
+			echo "Excelente! Respuesta correcta!"
+		else
+			if [ $answerKilo -gt 8192 ]; then
+				echo "Lo siento, un Kilobyte es un poco menos que $answerKilo bits!"
+			else
+				echo "Lo siento, un Kilobyte es un poco más que $answerKilo bits!"
+			fi
 		fi
 		;;
 
