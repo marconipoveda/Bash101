@@ -40,6 +40,11 @@ arregloNumeros[2]=23
 echo "Arreglo de números: ${arregloNumeros[*]}"
 echo "Tamaño arreglo de Números: ${#arregloNumeros[*]}"
 
+echo -e "\nAgrega el elemento en la posición después del último"
+arregloNumeros["${#arregloNumeros[*]}"]=24
+echo "Arreglo de números: ${arregloNumeros[*]}"
+echo "Tamaño arreglo de Números: ${#arregloNumeros[*]}"
+
 echo -e "\nElimina el elemento en la posición indicada (0)"
 unset arregloNumeros[0]
 echo "Arreglo de números: ${arregloNumeros[*]}"
