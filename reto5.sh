@@ -1,5 +1,6 @@
 #!/bin/bash
-#Reto 1
+#Reto 5
+# Modificar el archivo utilityHost.sh para escribir la información solicitada a un archivo de log cuyo nombre será log donde yyyy representa el año, MM el mes, DD el día, HH la hora, mm los minutos y SS los segundos
 
 option=2
 result=4
