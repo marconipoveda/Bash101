@@ -1,6 +1,6 @@
 #!/bin/bash
 # Programa para ejemplificar el uso la creación de archivos y directorios
-
+#
 echo "Leer un archivo..."
 
 cat $1
